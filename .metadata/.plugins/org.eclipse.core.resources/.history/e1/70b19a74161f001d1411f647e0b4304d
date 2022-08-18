@@ -1,0 +1,94 @@
+package caixa;
+
+import javax.swing.JOptionPane;
+
+public class Caixa {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] qtd = {0, 0, 0, 0, 0, 0, 0, 0};
+		
+		//notas disponiveis
+		int[] dsp = {10, 10, 10, 10, 10, 10, 10, 10};
+		
+		int valor;
+		
+		for (int i = 0; i < qtd.length; i++) {
+			JOptionPane.showMessageDialog(null, dsp[i]);
+		}
+		
+		valor = Integer.parseInt(
+				JOptionPane.showInputDialog(null, "digite o valor")
+				);
+		
+		//200
+		q200 = valor / 200;
+		if (q200 > t200) {
+			q200 = t200;
+		}
+		
+		valor = valor - q200 * 200;
+		t200 = t200 - q200;
+		
+		//100
+		q100 = valor / 100;
+		if (q100 > t100) {
+			q100 = t100;
+		}
+		
+		valor = valor - q100 * 100;
+		t100 = t100 - q100;
+		
+		//50
+		q50 = valor / 50;	
+		if (q100 > t100) {
+			q100 = t100;
+		}
+		
+		valor = valor - q50 * 50;
+		t50 = t50 - q50;
+		
+		//20
+		q20 = valor / 20;	
+		if (q20 > t20) {
+			q20 = t20;
+		}
+		
+		valor = valor - q20 * 20;
+		t20 = t20 - q20;
+		
+		//10
+		q10 = valor / 10;	
+		if (q10 > t10) {
+			q10 = t10;
+		}
+		
+		valor = valor - q10 * 10;
+		t10 = t10 - q10;
+		
+		//5
+		q5 = valor / 5;	
+		if (q5 > t5) {
+			q5 = t5;
+		}
+		
+		valor = valor - q5 * 5;
+		t5 = t5 - q5;
+		
+		//1
+		q1 = valor;
+		valor = valor - q1 * 5;
+		t1 = t1 - q1;
+		
+		JOptionPane.showMessageDialog(null, 
+			"Quantidade de notas de R$200: " + q200 +
+			"\nQuantidade de notas de R$100: " + q100 +
+			"\nQuantidade de notas de R$50: " + q50 +
+			"\nQuantidade de notas de R$20: " + q20 +
+			"\nQuantidade de notas de R$10: " + q10 +
+			"\nQuantidade de notas de R$5: " + q5 +
+			"\nQuantidade de notas de R$1: " + q1 
+		);
+	}
+
+}

@@ -1,0 +1,29 @@
+package caixa;
+
+import javax.swing.JOptionPane;
+
+public class Caixa {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int t200 = 10, t100 = 10, t50 = 10, t20 = 10,
+			t10 = 10, t5 = 10, t2 = 10, t1 = 10;
+		
+		int q200 = 0, q100 = 0, q50 = 0, q20 = 0, q10 = 0, q5 = 0, q2 = 0, q1 = 0;
+		
+		int valor;
+		
+		valor = Integer.parseInt(
+				JOptionPane.showInputDialog(null, "digite o valor")
+				);
+		
+		q200 = valor / 200;
+		
+		if (q200 > t200) {
+			t200 -= q200;
+			
+			JOptionPane.showConfirmDialog(null, t200);
+		}
+	}
+
+}

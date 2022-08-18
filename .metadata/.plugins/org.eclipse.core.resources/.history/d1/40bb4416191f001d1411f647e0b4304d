@@ -1,0 +1,39 @@
+package caixa;
+
+import javax.swing.JOptionPane;
+
+public class Caixa {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] qtd = {0, 0, 0, 0, 0, 0, 0, 0};
+		
+		//notas disponiveis
+		int[] dsp = {10, 10, 10, 10, 10, 10, 10, 10};
+		
+		int[] nts = {200, 100, 50, 20, 10, 5, 1};
+		
+		int valor;
+		
+		String str = "";
+		
+		valor = Integer.parseInt(
+				JOptionPane.showInputDialog(null, "digite o valor")
+				);
+		
+		int resto = valor;
+		
+		for (int i = 0; i < qtd.length - 1; i++) {
+			qtd[i] = resto / nts[i];
+			
+			resto = resto % nts[i];
+			
+			if (qtd[i] > 0) {
+				str += "\n" + qtd[i] + " notas de " + nts[i];
+			}
+		}
+		
+		JOptionPane.showMessageDialog(null, str);
+	}
+
+}
